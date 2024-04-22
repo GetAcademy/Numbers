@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    <script>
+        // model
+        //    index    0      1      2
+        let names = ['Per', 'Pål', 'Espen'];
+        // view
+        updateView();
+        function updateView() {
+            let html = '';
+
+            // let myNumber = 1;
+            // while (myNumber <= 10) {
+            //     html += `<li>${myNumber}</li>`;
+            //     myNumber++;
+            // }
+
+            for (let myNumber = 10; myNumber < 100; myNumber += 10) {
+                html += /*HTML*/`
+                        <div
+                            style="width: ${myNumber}px; height: ${myNumber}px;background-color: #${myNumber}${myNumber}${myNumber}"
+                
+                            >
+                            ${myNumber}
+                        </div>
+                    `;
+            }
+
+            // for (let myNumber = 11; myNumber < 100; myNumber += 11) {
+            //     html += `<li>${myNumber}</li>`;
+            // }
+
+            // for (let myNumber = 2000; myNumber <= 2024; myNumber += 4) {
+            //     html += `<li>${myNumber}</li>`;
+            // }
+
+            /*
+            for (let myNumber = 1; myNumber <= 3; myNumber++) {
+                html += `<li>${myNumber} ${names[myNumber]}</li>`;
+            }
+            */
+
+            document.getElementById('app').innerHTML = /*HTML*/`
+                ${html}
+            `;
+        }
+
+        // controller
+
+    </script>
+</body>
+
+</html>
